@@ -24,6 +24,7 @@ Route::get('/posts',[PostsApiController::class,'index']);
 Route::post('/posts',[PostsApiController::class,'store']);
 Route::put('/posts/{post}',[PostsApiController::class,'update']);
 Route::delete('/posts/{post}',[PostsApiController::class,'destroy']);
+Route::get('/posts/{title}',[PostsApiController::class,'search']);
 
 
 // Route::get('/posts', function(){

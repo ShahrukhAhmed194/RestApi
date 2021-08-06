@@ -52,4 +52,9 @@ class PostsApiController extends Controller
     
         return post::all();
     }
+
+    public function search($title){
+
+        return post::where('title', "like", "%".$title."%")->get();
+    }
 }
