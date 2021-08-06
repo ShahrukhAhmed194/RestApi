@@ -20,11 +20,17 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/posts',[PostsApiController::class,'index']);
+Route::post('/posts',[PostsApiController::class,'store']);
+Route::put('/posts/{post}',[PostsApiController::class,'update']);
+Route::delete('/posts/{post}',[PostsApiController::class,'destroy']);
+
 
 // Route::get('/posts', function(){
 //     return post::all();
 // });
-Route::get('/posts',[PostsApiController::class,'index']);
+// -----------------------------
+
 
 // Route::post('/posts', function(){
 //     request()->validate([
@@ -40,8 +46,8 @@ Route::get('/posts',[PostsApiController::class,'index']);
 //     return post::all();
 
 // });
+// -----------------------------
 
-Route::post('/posts',[PostsApiController::class,'store']);
 
 
 
@@ -60,8 +66,8 @@ Route::post('/posts',[PostsApiController::class,'store']);
 //     return post::all();
 
 // });
+// -----------------------------
 
-Route::put('/posts/{post}',[PostsApiController::class,'update']);
 
 
 // Route::delete('/posts/{post}',function(Post $post){
@@ -71,4 +77,3 @@ Route::put('/posts/{post}',[PostsApiController::class,'update']);
 //     return post::all();
 // });
 
-Route::delete('/posts/{post}',[PostsApiController::class,'destroy']);
