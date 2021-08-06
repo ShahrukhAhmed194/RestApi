@@ -1,0 +1,27 @@
+GET http://localhost/projects/Restful_API/public/api/posts HTTP/1.1
+
+###
+
+POST http://localhost/projects/Restful_API/public/api/posts HTTP/1.1
+Content-type: application/json
+
+{
+    "title" : "My 12th Title",
+
+    "content" : "My 12th Content"
+}
+
+###
+
+PUT http://localhost/projects/Restful_API/public/api/posts/9  HTTP/1.1
+Content-Type: application/json
+
+{
+    "title" : "My Ninth Title(updated)",
+
+    "content" : "My Ninth Content(updated)"
+}
+
+###
+
+DELETE http://localhost/projects/Restful_API/public/api/posts/12  HTTP/1.1
